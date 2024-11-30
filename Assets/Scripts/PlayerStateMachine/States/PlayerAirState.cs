@@ -21,7 +21,7 @@ public class PlayerAirState : PlayerState
     {
         base.Update();
 
-        if (rb.linearVelocity.y == 0)
+        if (player.IsGroundDetected())
             stateMachine.ChangeState(player.idleState);
     }
 }
